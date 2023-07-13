@@ -1,11 +1,16 @@
-.container 
-    &__image {
+.container {
+    & .background {
         height: 223px;
         width: 100%;
-        display: block;
-        object-fit: cover;
-        filter: brightness(75%);
-        border-radius: 25px;
+        &__image {
+            height: 223px;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            filter: brightness(75%);
+            border-radius: 25px;
+        }
+    }
     & .all {
         display: flex;
         flex-direction: column;
