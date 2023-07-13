@@ -23,4 +23,31 @@
             color: #fff;
         }
     }
+    & .gallery {
+        &__container {
+            margin: 25px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+            &__articles {
+                position: relative;
+
+                &__image {
+                    width: 100%;
+                    max-width: 340px;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+                &__title {
+                    font-size: 18px;
+                    font-weight: 500;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    z-index: 10;
+                }
+            }
+        }
+    }
 }
