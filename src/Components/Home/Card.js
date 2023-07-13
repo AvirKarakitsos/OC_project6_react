@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import jsonFile from '../assets/api/logements.json'
+import jsonFile from '../../assets/api/logements.json'
 
 function Card() {
     const [data, setData] = useState([])

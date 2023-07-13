@@ -1,4 +1,4 @@
-import styles from "../assets/styles/About.module.scss"
+import styles from "../../assets/styles/About.module.scss"
 
 function Collapse() {
     const table = [

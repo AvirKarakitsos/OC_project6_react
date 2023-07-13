@@ -1,7 +1,7 @@
-import background from '../assets/images/image-source-1.png'
-import '../assets/styles/Home.scss'
-import Footer from './Footer'
-import Header from './Header'
+import background from '../../assets/images/image-source-1.png'
+import '../../assets/styles/Home.scss'
+import Footer from '../layouts/Footer'
+import Header from '../layouts/Header'
 import Card from './Card'
 
 function Home() {
