@@ -1,0 +1,29 @@
+$text-color: #FF6060;
+
+.header {
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        height: 68px;
+        display: block;
+    }
+    &__navbar {
+        height: 34px;
+        width: 309px;
+        &__list {
+            display: flex;
+            list-style-type: none;
+            font-size: 24px;
+            & li{
+                width: 100%;
+                text-align: right;
+                & a {
+                    color: $text-color;
+                }
+            }
+            
+        }
+    }
+}

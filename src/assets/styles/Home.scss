@@ -1,0 +1,26 @@
+.main {
+    margin: 25px 0;
+    & .background {
+        height: 223px;
+        position: relative;
+        &__image {
+            height: 223px;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            filter: brightness(75%);
+            border-radius: 25px;
+        }
+        &__title {
+            position: absolute;
+            font-size: 48px;
+            font-weight: 500;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
