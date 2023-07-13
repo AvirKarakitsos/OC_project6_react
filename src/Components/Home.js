@@ -2,7 +2,7 @@ import background from '../assets/images/image-source-1.png'
 import '../assets/styles/Home.scss'
 import Footer from './Footer'
 import Header from './Header'
-import Cards from './Cards'
+import Card from './Card'
 
 function Home() {
     return (
@@ -15,7 +15,7 @@ function Home() {
             </div>
             <section className='gallery'>
                 <div className='gallery__container'>
-                    <Cards/>
+                    <Card/>
                 </div>
             </section>
         </main>
