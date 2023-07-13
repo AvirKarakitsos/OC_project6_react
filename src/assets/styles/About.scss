@@ -1,0 +1,21 @@
+.container 
+    &__image {
+        height: 223px;
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        filter: brightness(75%);
+        border-radius: 25px;
+    & .all {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        &__bar {
+            height: 52px;
+            width: 80%;
+            color: #fff;
+            background-color: #FF6060;
+        }
+    }
+}
+
