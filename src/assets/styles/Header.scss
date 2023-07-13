@@ -27,3 +27,9 @@ $text-color: #FF6060;
         }
     }
 }
+
+@media (max-width: 650px) {
+    .header {
+        height: 47px;
+    }
+}
