@@ -24,7 +24,7 @@ function Accommodation() {
 
     return (
         <div className={styles.container}>
-            <Slideshow/>
+            <Slideshow images={data.pictures}/>
             <div className={styles.content}>
                 <section className={styles.content__description}>
                     <h1 className={styles.content__description__title}>{data.title}</h1>
