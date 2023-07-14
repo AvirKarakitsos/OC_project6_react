@@ -12,7 +12,7 @@ function Accommodation() {
     const collapses = [
         {
             id: 0,
-            title: "Decription",
+            title: "Description",
             content: data.description, 
         },
         {
