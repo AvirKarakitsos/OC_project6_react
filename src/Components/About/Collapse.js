@@ -47,7 +47,7 @@ function Collapse() {
     return (
         table.map(inputValue => {
             return (
-                <div key={inputValue.id} className={"bar"+inputValue.id+" "+styles.collapse__bar}>
+                <div key={inputValue.id} className={styles.collapse__bar}>
                     <div className={styles.collapse__bar__title}>
                         <p>{inputValue.title}</p>
                         <span><i className={"arrow"+inputValue.id+" fa-solid fa-chevron-up"} onClick={() => handleShow(inputValue.id)}></i></span>

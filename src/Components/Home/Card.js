@@ -1,22 +1,14 @@
-import { useEffect, useState } from 'react'
-import jsonFile from '../../assets/api/logements.json'
+import { Link } from "react-router-dom"
 
-function Card() {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        let table = jsonFile.slice(0,6)
-        setData(table)
-    },[])
-
+function Card({value}) {
+    
     return (
-        data.map((inputValue => {
-            return(
-                <article className='gallery__container__articles' key={inputValue.id}>
-                    <img className='gallery__container__articles__image' src={inputValue.cover} alt="logement"/>
-                    <h2 className='gallery__container__articles__title'>{inputValue.title}</h2>
-                </article>    
-            )
-        }))
+        <article className='gallery__container__articles' key={value.id}>
+            <Link to={"/accommodation/"+value.id}>
+                <img className='gallery__container__articles__image' src={value.cover} alt="logement"/>
+                <h2 className='gallery__container__articles__title'>{value.title}</h2>
+            </Link>
+        </article>    
     )
 }
 

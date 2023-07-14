@@ -1,12 +1,18 @@
 import background from '../../assets/images/image-source-1.png'
 import '../../assets/styles/Home.scss'
-//import Footer from '../layouts/Footer'
-//import Header from '../layouts/Header'
+import jsonFile from '../../assets/api/logements.json'
 import Card from './Card'
+import { useEffect, useState } from 'react'
 
 function Home() {
+    const [data, setData] = useState([])
+    useEffect(() => {
+        let table = jsonFile.slice(0,6)
+        setData(table)
+    },[])
+
     return (
-       
+        
         <main className='main'>
             <div className="background">
                 <img className="background__image" src={background} alt="paysage"/>
@@ -14,7 +20,7 @@ function Home() {
             </div>
             <section className='gallery'>
                 <div className='gallery__container'>
-                    <Card/>
+                    {data.map((inputValue => <Card value={inputValue} key={inputValue.id} />))}
                 </div>
             </section>
         </main>
