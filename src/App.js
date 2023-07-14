@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
-import './assets/styles/App.scss'
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import './assets/styles/App.scss';
 import Home from './Components/Home/Home';
 import About from './Components/About/About';
-import Accommodation from './Components/Accommodation';
+import Accommodation from './Components/Home/Accommodation';
 import Error from './Components/Error';
 import Header from './Components/layouts/Header';
 import Footer from './Components/layouts/Footer';
