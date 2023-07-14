@@ -1,13 +1,11 @@
-import Header from "../layouts/Header";
-import Footer from "../layouts/Footer";
+//import Header from "../layouts/Header";
+//import Footer from "../layouts/Footer";
 import Collapse from "./Collapse"
 import image from "../../assets/images/image-source-2.png"
 import styles from "../../assets/styles/About.module.scss"
 
 function About() {
     return (
-        <>
-        <Header/>
         <main>
             <div className={styles.container}>
                 <div className={styles.background}>
@@ -18,8 +16,6 @@ function About() {
                 </section>
             </div>
         </main>
-        <Footer/>
-        </>
     )
 }
 

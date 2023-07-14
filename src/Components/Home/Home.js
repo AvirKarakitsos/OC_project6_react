@@ -1,13 +1,12 @@
 import background from '../../assets/images/image-source-1.png'
 import '../../assets/styles/Home.scss'
-import Footer from '../layouts/Footer'
-import Header from '../layouts/Header'
+//import Footer from '../layouts/Footer'
+//import Header from '../layouts/Header'
 import Card from './Card'
 
 function Home() {
     return (
-        <>
-        <Header/>
+       
         <main className='main'>
             <div className="background">
                 <img className="background__image" src={background} alt="paysage"/>
@@ -19,8 +18,6 @@ function Home() {
                 </div>
             </section>
         </main>
-        <Footer/>
-        </>
     )
 }
 
