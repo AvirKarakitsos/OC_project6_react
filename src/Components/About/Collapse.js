@@ -1,4 +1,4 @@
-import styles from "../../assets/styles/About.module.scss"
+import styles from "../../assets/styles/Collapse.module.scss"
 
 function Collapse({inputValue}) {
     
@@ -24,13 +24,13 @@ function Collapse({inputValue}) {
     }
 
     return (
-        <div className={styles.collapse__bar}>     
-            <div className={styles.collapse__bar__title}>
+        <div className={styles.bar}>     
+            <div className={styles.bar__title}>
                 <p>{inputValue.title}</p>
                 <span><i className={"arrow"+inputValue.id+" fa-solid fa-chevron-up"} onClick={() => handleShow(inputValue.id)}></i></span>
             </div>
-            <div className={"content"+inputValue.id+" "+styles.collapse__bar__content}>
-                <p>{inputValue.content}</p>
+            <div className={"content"+inputValue.id+" "+styles.bar__content}>
+                <p>{Array.isArray(inputValue.content) ? "true" : "false"}</p>
             </div>
         </div>
         )

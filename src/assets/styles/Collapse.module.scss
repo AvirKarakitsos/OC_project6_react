@@ -1,0 +1,29 @@
+$color: #FF6060;
+$color-background: #F6F6F6;
+
+.bar {
+    width: 80%;
+    overflow: hidden;
+    border-radius: 5px;
+    &__title {
+        height: 52px;
+        padding: 10px 15px;
+        
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        color: #fff;
+        background-color: $color;            
+    }
+    &__content {
+        height: 0;
+        position: relative;
+        color: $color;
+        transform: translateY(-52px);
+        background-color: $color-background;
+        z-index: -1;
+        & p {
+            padding: 10px;
+        }  
+    }
+}

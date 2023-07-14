@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom"
 import Slideshow from "./Slideshow"
 import styles from '../../assets/styles/Accommodation.module.scss'
+import Collapse from "../About/Collapse"
 
 
 function Accommodation() {
@@ -8,6 +9,18 @@ function Accommodation() {
     const data = location.state
     const stars = Array.from(Array(parseInt(data.rating)).keys())
     const noStars = Array.from(Array(5-parseInt(data.rating)).keys())
+    const collapses = [
+        {
+            id: 0,
+            title: "Decription",
+            content: data.description, 
+        },
+        {
+            id: 1,
+            title: "Equipements",
+            content: data.equipments
+        }
+    ]
 
     return (
         <div className={styles.container}>
@@ -31,9 +44,8 @@ function Accommodation() {
                     </div>
                 </section>
             </div>
-            <div>
-                <div>Description</div>
-                <div>Equipement</div>
+            <div className={styles.collapse}>
+                {collapses.map(inputValue => <Collapse inputValue={inputValue}  key={inputValue.id}/>)}
             </div>
         </div>
     )
