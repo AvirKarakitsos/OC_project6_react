@@ -20,30 +20,31 @@ $color-background: #F6F6F6;
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 30px;
+        row-gap: 15px;
         &__bar {
-            height: 52px;
             width: 80%;
             overflow: hidden;
-            position: relative;
-            background-color: #FF6060;
             border-radius: 5px;
             &__title {
+                height: 52px;
                 padding: 10px 15px;
+                
                 display: flex;
                 justify-content: space-between;
                 font-size: 24px;
                 color: #fff;
+                background-color: $color;            
             }
             &__content {
-                padding: 10px;
-                position: absolute;
-                bottom: 0;
-                overflow: hidden;
+                height: 0;
+                position: relative;
                 color: $color;
+                transform: translateY(-52px);
                 background-color: $color-background;
-                border: 1px solid #000;
                 z-index: -1;
+                & p {
+                    padding: 10px;
+                }  
             }
         }
     }
