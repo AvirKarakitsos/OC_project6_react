@@ -10,3 +10,15 @@
     color: #fff;
     background-color: #000;
 }
+
+@media (max-width:650px) {
+    .footer{
+        margin: 0 -20px;
+        font-size: 12px;
+        & p {
+            width: 122px;
+            text-align: center;
+        }
+    }
+}
+
