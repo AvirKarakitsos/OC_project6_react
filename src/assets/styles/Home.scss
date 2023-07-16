@@ -6,6 +6,9 @@ $color-background: #F6F6F6;
     & .background {
         height: 223px;
         position: relative;
+        @media (max-width: 650px){
+           height: 111px;
+        }
         &__image {
             height: 223px;
             width: 100%;
@@ -13,6 +16,9 @@ $color-background: #F6F6F6;
             object-fit: cover;
             filter: brightness(75%);
             border-radius: 25px;
+            @media (max-width: 650px){
+               height: 111px;
+            }
         }
         &__title {
             position: absolute;
@@ -24,6 +30,9 @@ $color-background: #F6F6F6;
             transform: translateY(-50%);
             text-align: center;
             color: $color-text;
+            @media (max-width: 650px){
+                font-size: 24px;
+            }
         }
     }
     & .gallery {
@@ -36,17 +45,27 @@ $color-background: #F6F6F6;
             gap: 30px;
             background-color: $color-background;
             border-radius: 10px;
+            @media (max-width:1024px){
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width:650px){
+                padding: 15px 0;
+                grid-template-columns: 1fr;
+            }
             &__articles {
                 width: 100%;
                 max-width: 340px;
                 position: relative;
-
                 &__image {
                     width: 100%;
                     max-width: 340px;
                     aspect-ratio: 1/1;
                     object-fit: cover;
                     border-radius: 10px;
+                    @media (max-width: 650px){
+                        height: 255px;
+                        aspect-ratio: 0;
+                    }
                 }
                 &__title {
                     position: absolute;
