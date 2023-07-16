@@ -9,6 +9,9 @@
         &.active {
             display: block;
         }
+        @media (max-width:650px) {
+            height: 255px;
+        }
     }
     & .btn, & .slide {
         position: absolute;
@@ -28,6 +31,9 @@
         cursor: pointer;
         color: #fff;
         background-color: #ffffff1A;
+        @media (max-width:650px) {
+            font-size: 24px;
+        }
         &:active {
             background-color: #ffffff59;
         }
