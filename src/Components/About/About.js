@@ -1,6 +1,7 @@
-import Collapse from "./Collapse"
 import image from "../../assets/images/image-source-2.png"
 import styles from "../../assets/styles/About.module.scss"
+import Collapse from "./Collapse"
+import Layout from "../layouts/Layout"
 
 function About() {
     const table = [
@@ -27,16 +28,18 @@ function About() {
     ]
 
     return (
-        <main>
-            <div className={styles.container}>
-                <div className={styles.background}>
-                    <img className={styles.background__image} src={image} alt="paysage"/>
+        <Layout>
+            <main>
+                <div className={styles.container}>
+                    <div className={styles.background}>
+                        <img className={styles.background__image} src={image} alt="paysage"/>
+                    </div>
+                    <section className={styles.collapse}>
+                    {table.map(inputValue => <Collapse inputValue={inputValue}  key={inputValue.id}/>)}
+                    </section>
                 </div>
-                <section className={styles.collapse}>
-                {table.map(inputValue => <Collapse inputValue={inputValue}  key={inputValue.id}/>)}
-                </section>
-            </div>
-        </main>
+            </main>
+        </Layout>
     )
 }
 
