@@ -3,6 +3,7 @@ import '../../assets/styles/Home.scss'
 import jsonFile from '../../assets/api/logements.json'
 import Card from './Card'
 import { useEffect, useState } from 'react'
+import Layout from '../layouts/Layout'
 
 function Home() {
     const [data, setData] = useState([])
@@ -12,7 +13,7 @@ function Home() {
     },[])
 
     return (
-        
+        <Layout>
         <main className='main'>
             <div className="background">
                 <img className="background__image" src={background} alt="paysage"/>
@@ -24,6 +25,7 @@ function Home() {
                 </div>
             </section>
         </main>
+        </Layout>
     )
 }
 
