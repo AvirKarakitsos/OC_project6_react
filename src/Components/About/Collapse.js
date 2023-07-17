@@ -11,16 +11,14 @@ function Collapse({inputValue}) {
         
         if (arrow.classList.contains("rotate")) {
             arrow.style.transform = "rotate(-180deg)" 
-            arrow.style.transition = "transform 1000ms" 
+            arrow.style.transition = "transform 1250ms" 
             content.style.transform = "translateY(0)"; 
             ( ((number > 3) && (number < 10)) || (number > 300) ) ? content.style.height = "150px" : content.style.height = "85px"
-            content.style.transition = "transform 1000ms, height 1000ms 250ms"
         } else {
             arrow.style.transform = "rotate(0deg)" 
-            arrow.style.transition = "transform 1000ms"
+            arrow.style.transition = "transform 1250ms"
             content.style.transform = "translateY(-150px)"
-            content.style.height = "0" 
-            content.style.transition = "all 1000ms"
+            content.style.height = "0"
         }
     }
 

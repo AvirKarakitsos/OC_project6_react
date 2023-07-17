@@ -21,6 +21,7 @@ $color-background: #F6F6F6;
         align-items: center;
         color: $color;
         transform: translateY(-150px);
+        transition: all 1250ms;
         background-color: $color-background;
         z-index: -1;
         & p, & ul {
