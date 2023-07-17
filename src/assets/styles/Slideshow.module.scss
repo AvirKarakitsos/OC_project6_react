@@ -1,13 +1,29 @@
 .slideContainer {
+    height: 415px;
     margin: 25px 0;
     position: relative;
+    overflow: hidden;
+    @media (max-width:650px) {
+        height: 255px;
+    }
     & .images {
+        position: absolute;
         width: 100%;
         display: none;
         object-fit: cover;
         border-radius: 20px;
+        transition: transform 1000ms;
         &.active {
             display: block;
+            transform: translateX(0);
+        }
+        &.activeNext {
+            display: block;
+            transform: translateX(100%);
+        }
+        &.activePrevious {
+            display: block;
+            transform: translateX(-100%);
         }
         @media (max-width:650px) {
             height: 255px;
