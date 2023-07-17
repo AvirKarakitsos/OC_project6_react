@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import Layout from "../layouts/Layout"
 import Slideshow from "./Slideshow"
 import styles from '../../assets/styles/Accommodation.module.scss'
@@ -10,11 +10,20 @@ function Accommodation() {
    
     const param = useParams()
     const dataArray = jsonFile.filter(value => value.id === param.id)
-    const data = dataArray[0]
+    let data = null
+    let stars = null
+    let noStars = null
+    let collapses = []
+
+    if(dataArray.length === 1) {
+        data = dataArray[0] 
+    } else {
+        return (<Navigate to="/error"/>)
+    }
    
-    const stars = Array.from(Array(parseInt(data.rating)).keys())
-    const noStars = Array.from(Array(5-parseInt(data.rating)).keys())
-    const collapses = [
+    stars = Array.from(Array(parseInt(data.rating)).keys())
+    noStars = Array.from(Array(5-parseInt(data.rating)).keys())
+    collapses = [
         {
             id: 0,
             title: "Description",
