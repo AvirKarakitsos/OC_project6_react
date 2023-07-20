@@ -50,7 +50,7 @@ function Accommodation() {
                     </section>
                     <section className={styles.content__owner}>
                         <div className={styles.content__owner__picture}>
-                            <h2>{data.host.name}</h2>
+                            <h2>{data.host.name.split(" ")[0]}<br/>{data.host.name.split(" ")[1]}</h2>
                             <img height={64} width={64} src={data.host.picture} alt="propriétaire"/>
                         </div>
                         <div className={styles.content__owner__rating}>

@@ -38,7 +38,7 @@ $color-background: #F6F6F6;
                 font-size: 14px;
                 color: #fff;
                 background-color: $color;
-                border-radius: 30px;
+                border-radius: 8px;
                 @media (max-width:650px) {
                     font-size: 10px;
                 }
@@ -56,10 +56,11 @@ $color-background: #F6F6F6;
         &__picture {
             display: flex;
             justify-content: flex-end;
-            column-gap: 5px;
+            column-gap: 8px;
             & h2 {
                 display: flex;
                 align-items: center;
+                text-align: right;
                 font-size: 18px;
                 font-weight: 500;
                 @media (max-width:650px) {
@@ -88,8 +89,12 @@ $color-background: #F6F6F6;
     margin: 25px 0;
     display: flex;
     gap: 50px;
+    @media (max-width:1024px) {
+        gap: 20px;
+    }
     @media (max-width:650px) {
         flex-direction: column;
+        align-items: center;
         gap: 25px;
     }
 }

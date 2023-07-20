@@ -29,7 +29,13 @@ $color-background: #F6F6F6;
         }  
     }
 }
-
+@media (max-width:1024px) {
+    .bar {
+        &__content {
+            font-size: 15px;
+        }
+    }
+}
 @media (max-width:650px) {
     .bar {
         width: 100%;

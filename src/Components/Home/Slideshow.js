@@ -1,9 +1,17 @@
 import { useState } from 'react'
 import styles from '../../assets/styles/Slideshow.module.scss'
+import { useEffect } from 'react'
 
 function Slideshow({images}) {
     let numberImages = images.length
     const [counter, setCounter] = useState(1)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        window.addEventListener("resize",()=> {
+            setWindowWidth(window.innerWidth)
+        },[])
+    })
 
     function cleanList() {
         let all = document.querySelectorAll(".Slideshow_images__qkHEd")
@@ -90,10 +98,10 @@ function Slideshow({images}) {
             
             {numberImages !== 1 ? 
                 <><button onClick={handlePrevious} className={styles.btn+" "+styles.previous}><i className="fa-solid fa-chevron-left icon"></i></button>
-                <button onClick={handleNext} className={styles.btn+" "+styles.next}><i className="fa-solid fa-chevron-right icon"></i></button>
-                <div className={styles.slide}>{counter+"/"+numberImages}</div></>
+                <button onClick={handleNext} className={styles.btn+" "+styles.next}><i className="fa-solid fa-chevron-right icon"></i></button></>
                 : null
             }
+            {((windowWidth > 650) && (numberImages !== 1 )) ? <div className={styles.slide}>{counter+"/"+numberImages}</div> : null}
         </div>
     )
 }
