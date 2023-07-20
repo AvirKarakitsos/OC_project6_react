@@ -1,4 +1,4 @@
-import styles from "../../assets/styles/Collapse.module.scss"
+import styles from "../assets/styles/Collapse.module.scss"
 
 function Collapse({inputValue}) {
     let number = inputValue.content.length

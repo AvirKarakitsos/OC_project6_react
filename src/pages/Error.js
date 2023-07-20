@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import styles from '../assets/styles/Error.module.scss'
-import Layout from "./layouts/Layout"
+import Layout from "../Components/layouts/Layout"
 
 function Error() {
     return (

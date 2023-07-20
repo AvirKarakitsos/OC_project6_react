@@ -1,7 +1,7 @@
-import image from "../../assets/images/image-source-2.png"
-import styles from "../../assets/styles/About.module.scss"
-import Collapse from "./Collapse"
-import Layout from "../layouts/Layout"
+import image from "../assets/images/image-source-2.png"
+import styles from "../assets/styles/About.module.scss"
+import Layout from "../Components/layouts/Layout"
+import Collapse from "../Components/Collapse"
 
 function About() {
     const table = [

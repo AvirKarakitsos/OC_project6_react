@@ -1,10 +1,9 @@
+import styles from '../assets/styles/Accommodation.module.scss'
+import jsonFile from "../assets/api/logements.json"
+import Layout from "../Components/layouts/Layout"
+import Slideshow from "../Components/Slideshow"
+import Collapse from "../Components/Collapse"
 import { Navigate, useParams } from "react-router-dom"
-import Layout from "../layouts/Layout"
-import Slideshow from "./Slideshow"
-import styles from '../../assets/styles/Accommodation.module.scss'
-import Collapse from "../About/Collapse"
-import jsonFile from "../../assets/api/logements.json"
-
 
 function Accommodation() {
    

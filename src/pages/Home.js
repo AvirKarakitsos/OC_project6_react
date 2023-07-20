@@ -1,9 +1,9 @@
-import background from '../../assets/images/image-source-1.png'
-import '../../assets/styles/Home.scss'
-import jsonFile from '../../assets/api/logements.json'
-import Card from './Card'
+import '../assets/styles/Home.scss'
+import background from '../assets/images/image-source-1.png'
+import jsonFile from '../assets/api/logements.json'
+import Layout from '../Components/layouts/Layout'
+import Card from '../Components/Card'
 import { useEffect, useState } from 'react'
-import Layout from '../layouts/Layout'
 
 function Home() {
     const [data, setData] = useState([])

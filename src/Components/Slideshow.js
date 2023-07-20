@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import styles from '../../assets/styles/Slideshow.module.scss'
-import { useEffect } from 'react'
+import styles from '../assets/styles/Slideshow.module.scss'
+import { useState, useEffect } from 'react'
 
 function Slideshow({images}) {
     let numberImages = images.length

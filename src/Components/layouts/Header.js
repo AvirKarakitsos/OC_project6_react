@@ -1,7 +1,7 @@
-import { Link, useLocation } from 'react-router-dom'
 import '../../assets/styles/Header.scss'
 import logo from '../../assets/images/logo-light.png'
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
