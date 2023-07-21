@@ -6,12 +6,7 @@ import Card from '../Components/Card'
 import { useEffect, useState } from 'react'
 
 function Home() {
-    const [data, setData] = useState([])
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-    useEffect(() => {
-        //let table = jsonFile.slice(0,6)
-        setData(jsonFile)
-    },[])
     
     useEffect(() => {
         window.addEventListener("resize",()=> {
@@ -30,7 +25,7 @@ function Home() {
                 </div>
                 <section className='gallery'>
                     <div className='gallery__container'>
-                        {data.map((inputValue => <Card value={inputValue} key={inputValue.id} />))}
+                        {jsonFile.map((inputValue => <Card value={inputValue} key={inputValue.id} />))}
                     </div>
                 </section>
             </main>

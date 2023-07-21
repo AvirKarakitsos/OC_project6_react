@@ -21,7 +21,7 @@ function Header() {
             setAbout("A propos")
         }
 
-    },[location.pathname,windowWidth])
+    },[windowWidth])
     
     return (
         <header className='header'>

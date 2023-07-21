@@ -1,5 +1,8 @@
 .container {
     margin: 38px 0;
+    @media (max-width: 650px) {
+        margin: 19px 0;
+    }
     & .background {
         height: 223px;
         width: 100%;
@@ -9,7 +12,7 @@
             display: block;
             object-fit: cover;
             filter: brightness(75%);
-            border-radius: 25px;
+            border-radius: 10px;
         }
     }
     & .collapse {
@@ -18,5 +21,9 @@
         flex-direction: column;
         align-items: center;
         row-gap: 30px;
+        @media (max-width: 650px) {
+            margin-top: 19px;
+            row-gap: 20px;
+        }
     }
 }
