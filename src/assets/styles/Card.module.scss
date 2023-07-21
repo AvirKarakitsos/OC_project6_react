@@ -1,0 +1,27 @@
+$color-text: #fff;
+
+.articles {
+    width: 100%;
+    max-width: 340px;
+    position: relative;
+    &__image {
+        width: 100%;
+        max-width: 340px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 10px;
+        @media (max-width: 650px){
+            height: 255px;
+            aspect-ratio: 0;
+        }
+    }
+    &__title {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: $color-text;
+        z-index: 10;
+    }
+}
