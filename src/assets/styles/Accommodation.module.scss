@@ -1,6 +1,9 @@
 $color: #FF6060;
 $color-background: #F6F6F6;
 
+.container {
+    margin: 50px 0;
+}
 .content {
     display: flex;
     justify-content: space-between;
@@ -11,7 +14,7 @@ $color-background: #F6F6F6;
     &__description {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         @media (max-width:650px) {
             gap: 10px;
         }
@@ -31,7 +34,8 @@ $color-background: #F6F6F6;
         }
         &__tags {
             display: flex;
-            column-gap: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
             list-style-type: none;
             & li {
                 padding: 3px 20px;
