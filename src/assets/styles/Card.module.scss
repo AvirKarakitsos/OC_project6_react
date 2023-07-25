@@ -1,4 +1,4 @@
-$color-text: #fff;
+@import "./colors";
 
 .articles {
     width: 100%;
@@ -21,7 +21,7 @@ $color-text: #fff;
         left: 10px;
         font-size: 18px;
         font-weight: 500;
-        color: $color-text;
+        color: $color-white;
         z-index: 10;
     }
 }

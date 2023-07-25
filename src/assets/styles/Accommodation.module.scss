@@ -1,5 +1,4 @@
-$color: #FF6060;
-$color-background: #F6F6F6;
+@import "./colors";
 
 .container {
     margin: 50px 0;
@@ -7,7 +6,7 @@ $color-background: #F6F6F6;
 .content {
     display: flex;
     justify-content: space-between;
-    color: $color;
+    color: $color-primary;
     @media (max-width:650px) {
         flex-direction: column;
     }
@@ -40,8 +39,8 @@ $color-background: #F6F6F6;
             & li {
                 padding: 3px 20px;
                 font-size: 14px;
-                color: #fff;
-                background-color: $color;
+                color: $color-white;
+                background-color: $color-primary;
                 border-radius: 8px;
                 @media (max-width:650px) {
                     font-size: 10px;
@@ -81,7 +80,7 @@ $color-background: #F6F6F6;
             display: flex;
             column-gap: 10px;
             & .noActive {
-                color:#F6F6F6;
+                color: $color-background;
             }
             @media (max-width:650px) {
                 font-size: 18px;

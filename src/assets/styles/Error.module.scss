@@ -1,3 +1,5 @@
+@import "./colors";
+
 .container {
     margin: 139px 0;
     display: flex;
@@ -5,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     row-gap: 139px;
-    color: #FF6060;
+    color: $color-primary;
     &__error {
         font-size: 288px;
     }
@@ -15,7 +17,7 @@
     }
     &__link a {
         font-size: 18px;
-        color: #FF6060;
+        color: $color-primary;
     }
 }
 
@@ -31,7 +33,7 @@
         }
         &__link a {
             font-size: 14px;
-            color: #FF6060;
+            color: $color-primary;
         }
     }
     

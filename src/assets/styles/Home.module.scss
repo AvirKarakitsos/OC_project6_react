@@ -1,5 +1,4 @@
-$color-text: #fff;
-$color-background: #F6F6F6;
+@import "./colors";
 
 .main {
     margin: 50px 0;
@@ -30,7 +29,7 @@ $color-background: #F6F6F6;
             right: 0;
             transform: translateY(-50%);
             text-align: center;
-            color: $color-text;
+            color: $color-white;
             @media (max-width: 650px){
                 font-size: 24px;
                 text-align: left;

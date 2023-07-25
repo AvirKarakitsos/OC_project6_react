@@ -1,4 +1,4 @@
-$text-color: #FF6060;
+@import "./colors";
 
 .header {
     height: 68px;
@@ -19,10 +19,10 @@ $text-color: #FF6060;
             & li{
                 width: 100%;
                 text-align: right;
-                color: $text-color;
+                color: $color-primary;
                 cursor: default;
                 & a {
-                    color: $text-color;
+                    color: $color-primary;
                 }
                 & .link {
                     text-decoration: none;
