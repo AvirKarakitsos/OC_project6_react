@@ -50,8 +50,11 @@ function Slideshow({images}) {
         }
 
         actual.classList.add("Slideshow_activePrevious__ODIj-")
+        actual.style.zIndex = "10"
         next.classList.add("Slideshow_active__exnB9")
+        next.style.zIndex = "10"
         next2.classList.add("Slideshow_activeNext__ZyvFa")
+        next2.style.zIndex = "-1"
     }
 
     function handlePrevious() {
@@ -83,8 +86,11 @@ function Slideshow({images}) {
         }
 
         actual.classList.add("Slideshow_activeNext__ZyvFa")
+        actual.style.zIndex = "10"
         next.classList.add("Slideshow_active__exnB9")
+        next.style.zIndex = "10"
         next2.classList.add("Slideshow_activePrevious__ODIj-")
+        next2.style.zIndex = "-1"
     }
 
     return (
