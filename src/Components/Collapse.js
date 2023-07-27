@@ -1,4 +1,5 @@
 import styles from "../assets/styles/Collapse.module.scss"
+import arrow from "../assets/images/arrow.png"
 
 function Collapse({inputValue}) {
     let number = inputValue.content.length
@@ -26,7 +27,7 @@ function Collapse({inputValue}) {
         <div className={styles.bar}>     
             <div className={styles.bar__title}>
                 <p>{inputValue.title}</p>
-                <span><i className={"arrow"+inputValue.id+" fa-solid fa-chevron-up"} onClick={() => handleShow(inputValue.id)}></i></span>
+                <img className={"arrow"+inputValue.id} src={arrow} alt="flèche" onClick={() => handleShow(inputValue.id)}/>
             </div>
             <div className={"content"+inputValue.id+" "+styles.bar__content}>
                 {Array.isArray(inputValue.content) ? 
