@@ -2,6 +2,9 @@
 
 .container {
     margin: 50px 0;
+    @media (max-width:650px) {
+        margin: 27px 0;
+    }
 }
 .content {
     display: flex;
@@ -9,6 +12,7 @@
     color: $color-primary;
     @media (max-width:650px) {
         flex-direction: column;
+        row-gap: 16px;
     }
     &__description {
         display: flex;
@@ -34,7 +38,7 @@
         &__tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 5px 15px;
             list-style-type: none;
             & li {
                 padding: 3px 20px;
@@ -73,31 +77,25 @@
             & img {
                 display: block;
                 border-radius: 50%;
-            }
-        }
-        &__rating {
-            font-size: 30px;
-            display: flex;
-            column-gap: 10px;
-            & .noActive {
-                color: $color-background;
-            }
-            @media (max-width:650px) {
-                font-size: 18px;
+                @media (max-width:650px) {
+                    height: 35px;
+                    width: 35px;
+                }
             }
         }
     }
 }
 .collapse {
-    margin: 25px 0;
+    margin-top: 24px;
     display: flex;
     gap: 50px;
     @media (max-width:1024px) {
-        gap: 20px;
+        gap: 10px;
     }
     @media (max-width:650px) {
+        margin-top: 13px;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
+        gap: 20px;
     }
 }

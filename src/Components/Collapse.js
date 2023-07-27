@@ -13,7 +13,7 @@ function Collapse({inputValue}) {
             arrow.style.transform = "rotate(-180deg)" 
             arrow.style.transition = "transform 1250ms" 
             content.style.transform = "translateY(0)"; 
-            ( ((number > 3) && (number < 10)) || (number > 300) ) ? content.style.height = "150px" : content.style.height = "85px"
+            ( ((number > 3) && (number < 10)) || (number > 300) ) ? content.style.height = "160px" : content.style.height = "90px"
         } else {
             arrow.style.transform = "rotate(0deg)" 
             arrow.style.transition = "transform 1250ms"
