@@ -1,5 +1,5 @@
-import styles from'../../assets/styles/Header.module.scss'
-import logo from '../../assets/images/logo-light.png'
+import styles from'../assets/styles/Header.module.scss'
+import logo from '../assets/images/logo-light.png'
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 

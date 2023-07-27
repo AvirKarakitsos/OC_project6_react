@@ -1,5 +1,5 @@
-import logo from '../../assets/images/logo-dark.png'
-import styles from '../../assets/styles/Footer.module.scss'
+import logo from '../assets/images/logo-dark.png'
+import styles from '../assets/styles/Footer.module.scss'
 
 function Footer() {
     return(

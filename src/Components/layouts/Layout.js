@@ -1,6 +1,6 @@
 import styles from "../../assets/styles/Layout.module.scss"
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../Footer";
+import Header from "../Header";
 
 
 function Layout({children}) {
