@@ -4,6 +4,7 @@ import arrow from "../assets/images/arrow.png"
 function Collapse({inputValue}) {
     let number = inputValue.content.length
 
+    //Animation for the collapse
     function handleShow(id) {
         let arrow = document.querySelector(`.arrow${id}`)
         let content = document.querySelector(`.content${id}`)
@@ -14,7 +15,7 @@ function Collapse({inputValue}) {
             arrow.style.transform = "rotate(-180deg)" 
             arrow.style.transition = "transform 1250ms" 
             content.style.transform = "translateY(0)"; 
-            ( ((number > 3) && (number < 10)) || (number > 300) ) ? content.style.height = "160px" : content.style.height = "90px"
+            ( ((number > 3) && (number < 10)) || (number > 250) ) ? content.style.height = "160px" : content.style.height = "90px"
         } else {
             arrow.style.transform = "rotate(0deg)" 
             arrow.style.transition = "transform 1250ms"

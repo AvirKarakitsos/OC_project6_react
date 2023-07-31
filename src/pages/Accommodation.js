@@ -14,18 +14,21 @@ function Accommodation() {
     let stars = null
     let collapses = []
 
+    //Calcule the viewport
     useEffect(() => {
         window.addEventListener("resize",()=> {
             setWindowWidth(window.innerWidth)
         })
     })
 
+    //Test if th url is correct
     if(dataArray.length === 1) {
         data = dataArray[0] 
     } else {
         return (<Navigate to="/error"/>)
     }
    
+    //Datas coming from json file
     stars = Array.from(Array(parseInt(data.rating)).keys())
     collapses = [
         {

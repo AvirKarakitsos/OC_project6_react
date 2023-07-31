@@ -36,30 +36,32 @@
         z-index: 10;
     }
     & .btn {
-        height: 50px;
-        width: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // height: 50px;
+        // width: 50px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
         top: 50%;
         transform: translateY(-50%);
-        font-size: 50px;
+        // font-size: 50px;
         border: 0;
-        border-radius: 50%;
+        // border-radius: 50%;
         cursor: pointer;
-        color: $color-white;
+        // color: $color-white;
         background-color: $color-transparent;
-        @media (max-width:650px) {
-            font-size: 24px;
-        }
-        &:active {
-            background-color: $color-active;
-        }
+        // &:active {
+        //     background-color: $color-active;
+        // }
         &.previous {
             left: 5%;
         }
         &.next {
             right: 5%;
+        }
+        & img {
+            @media (max-width:650px) {
+                height: 24px;
+            }
         }
     }
     & .slide {

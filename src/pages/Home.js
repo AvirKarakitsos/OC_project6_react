@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 function Home() {
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     
+    //Calcule the viewport
     useEffect(() => {
         window.addEventListener("resize",()=> {
             setWindowWidth(window.innerWidth)

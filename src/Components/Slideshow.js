@@ -1,4 +1,6 @@
 import styles from '../assets/styles/Slideshow.module.scss'
+import arrowLeft from '../assets/images/arrow-left.png'
+import arrowRight from '../assets/images/arrow-right.png'
 import { useState, useEffect } from 'react'
 
 function Slideshow({images}) {
@@ -6,12 +8,14 @@ function Slideshow({images}) {
     const [counter, setCounter] = useState(1)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
+    //Calcule the viewport
     useEffect(() => {
         window.addEventListener("resize",()=> {
             setWindowWidth(window.innerWidth)
         },[])
     })
 
+    //Clean the classes
     function cleanList() {
         let all = document.querySelectorAll(".Slideshow_images__qkHEd")
        
@@ -21,6 +25,7 @@ function Slideshow({images}) {
         })
     }
 
+    //Click event on right arrow navigation
     function handleNext() {
         let actual
         let next
@@ -57,6 +62,7 @@ function Slideshow({images}) {
         next2.style.zIndex = "-1"
     }
 
+    //click event on left arrow navigation
     function handlePrevious() {
         let actual
         let next
@@ -102,8 +108,8 @@ function Slideshow({images}) {
             {(numberImages > 2)  && <img height={415} src={images[numberImages-1]} id={`image${numberImages-1}`} className={styles.images+" "+styles.activePrevious} alt="photos appartements"/>}
             
             {numberImages !== 1 ? 
-                <><button onClick={handlePrevious} className={styles.btn+" "+styles.previous}><i className="fa-solid fa-chevron-left icon"></i></button>
-                <button onClick={handleNext} className={styles.btn+" "+styles.next}><i className="fa-solid fa-chevron-right icon"></i></button></>
+                <><button onClick={handlePrevious} className={styles.btn+" "+styles.previous}><img src={arrowLeft} alt="flèche de gauche"/></button>
+                <button onClick={handleNext} className={styles.btn+" "+styles.next}><img src={arrowRight} alt="flèche de droite"/></button></>
                 : null
             }
             {((windowWidth > 650) && (numberImages !== 1 )) ? <div className={styles.slide}>{counter+"/"+numberImages}</div> : null}

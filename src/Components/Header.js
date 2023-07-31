@@ -9,6 +9,7 @@ function Header() {
     const [about, setAbout] = useState("")
     const location = useLocation()
 
+    //Assign the good strings depending on the viewport
     useEffect(() => {
         window.addEventListener("resize",()=> {
             setWindowWidth(window.innerWidth)
