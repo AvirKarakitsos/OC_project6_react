@@ -11,23 +11,39 @@
         font-size: 24px;
         color: $color-white;
         background-color: $color-primary;
-        & img {
+
+        img {
             display: block;
+            transform: rotate(180deg);
+            transition: transform 1250ms;
+        }
+                
+        .iconeOpen {
+            transform: rotate(0deg);
         }            
     }
     &__content {
-        height: 0;
+        height: 0px;
         position: relative;
         display: flex;
         align-items: center;
         color: $color-primary;
-        transform: translateY(-150px);
+        transform: translateY(-160px);
         transition: all 1250ms;
         background-color: $color-background;
         z-index: -1;
+
         & p, & ul {
             padding: 10px;
         }  
+    }
+    .collapseOpen160 {
+        height: 160px;
+        transform: translateY(0px);
+    }
+    .collapseOpen90 {
+        height: 90px;
+        transform: translateY(0px);
     }
 }
 @media (max-width:1024px) {
