@@ -1,19 +1,13 @@
 import styles from '../assets/styles/Slideshow.module.scss'
 import arrowLeft from '../assets/images/arrow-left.png'
 import arrowRight from '../assets/images/arrow-right.png'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { useViewport } from '../utils/useViewport'
 
 function Slideshow({images}) {
     let numberImages = images.length
     const [counter, setCounter] = useState(1)
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
-
-    //Calcule the viewport
-    useEffect(() => {
-        window.addEventListener("resize",()=> {
-            setWindowWidth(window.innerWidth)
-        },[])
-    })
+    const windowWidth = useViewport()
 
     function handleNext() {
         if(counter === numberImages) setCounter(1)

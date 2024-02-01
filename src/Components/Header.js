@@ -2,18 +2,16 @@ import styles from'../assets/styles/Header.module.scss'
 import logo from '../assets/images/logo-light.png'
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useViewport } from '../utils/useViewport'
 
 function Header() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const windowWidth = useViewport()
     const [home, setHome] = useState("")
     const [about, setAbout] = useState("")
     const location = useLocation()
 
     //Assign the good strings depending on the viewport
     useEffect(() => {
-        window.addEventListener("resize",()=> {
-            setWindowWidth(window.innerWidth)
-        })
         if(windowWidth <= 650) {
             setHome("ACCUEIL")
             setAbout("A PROPOS")

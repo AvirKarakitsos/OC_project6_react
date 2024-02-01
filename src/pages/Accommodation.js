@@ -4,22 +4,15 @@ import Layout from "../Components/layouts/Layout"
 import Slideshow from "../Components/Slideshow"
 import Collapse from "../Components/Collapse"
 import { Navigate, useParams } from "react-router-dom"
-import { useEffect, useState } from 'react'
+import { useViewport } from '../utils/useViewport'
 
 function Accommodation() {
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const windowWidth = useViewport()
     const param = useParams()
     const dataArray = jsonFile.filter(value => value.id === param.id)
     let data = null
     let stars = null
     let collapses = []
-
-    //Calcule the viewport
-    useEffect(() => {
-        window.addEventListener("resize",()=> {
-            setWindowWidth(window.innerWidth)
-        })
-    })
 
     //Test if th url is correct
     if(dataArray.length === 1) {
@@ -57,6 +50,7 @@ function Accommodation() {
                     </section>
                     <section className={styles.content__owner}>
                         <div className={styles.content__owner__picture}>
+                        windowWidth
                             <h2>{data.host.name.split(" ")[0]}<br/>{data.host.name.split(" ")[1]}</h2>
                             <img height={64} width={64} src={data.host.picture} alt="propriétaire"/>
                         </div>
